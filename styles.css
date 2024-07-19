@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.wheel-container {
+    display: flex;
+    gap: 20px;
+}
+
+.wheel {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.wheel-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#f00 0 36deg, #ff0 36deg 72deg, #0f0 72deg 108deg, #0ff 108deg 144deg, #00f 144deg 180deg, #f0f 180deg 216deg, #f00 216deg 252deg, #ff0 252deg 288deg, #0f0 288deg 324deg, #0ff 324deg 360deg);
+    transition: transform 10s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+button {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1; /* Ensures the button is in front of the wheel */
+}
