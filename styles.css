@@ -5,6 +5,7 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 .wheel-container {
@@ -40,4 +41,5 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    z-index: 1; /* Ensures the button is in front of the wheel */
 }
